@@ -1,3 +1,5 @@
+Day 2: Temporary User Setup with Expiry
+
 Question:
 Create a user named kirsty on App Server 3 in Stratos Datacenter. Set the expiry date to 2024-04-15, ensuring the user is created in lowercase as per standard protocol.
 
