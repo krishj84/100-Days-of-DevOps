@@ -9,6 +9,9 @@ No need to reboot the server, as a scheduled maintenance reboot is already plann
 
 Disregard the current status of SELinux via the command line; the final status after the reboot should be disabled.
 
+Solution:
+SELinux - Security Enhanced Linux
+
 <img width="1242" height="551" alt="Screenshot 2026-01-05 at 6 45 36 PM" src="https://github.com/user-attachments/assets/d3e24a6b-1fcd-4584-bc07-ea44c5df8f34" />
 
 <img width="743" height="559" alt="Screenshot 2026-01-05 at 6 49 28 PM" src="https://github.com/user-attachments/assets/4984163e-70df-4cef-9a97-7a6dbcc009b1" />
@@ -21,4 +24,5 @@ Update SELinux to "disabled"
 
 <img width="743" height="530" alt="Screenshot 2026-01-05 at 6 51 05 PM" src="https://github.com/user-attachments/assets/07ef5c21-aae3-4523-bb3d-e105d6f1ed75" />
 
+sestatus --> This command displays the current SELinux configuration, including whether it's enabled, the current mode, and the loaded policy.
 
