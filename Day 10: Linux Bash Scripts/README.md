@@ -12,3 +12,31 @@ e. Do not use sudo inside the script.
 
 Note:
 The zip package must be installed on given App Server before executing the script. This package is essential for creating the zip archive of the website files. Install it manually outside the script.
+
+
+Task Summary
+
+Server: App Server 3 (Stratos Datacenter)
+Script Name: /scripts/ecommerce_backup.sh
+
+Script Objectives:
+
+a. Create a zip archive named xfusioncorp_beta.zip of /var/www/html/ecommerce.
+b. Save the archive in /backup/.
+c. Copy the archive to the Nautilus Backup Server in /backup/.
+d. Ensure passwordless SSH access between servers.
+e. Do not use sudo inside the script.
+
+Commands used:
+sudo yum update
+sudo yum install zip
+cd /scripts
+vi ecommerce_backup.sh
+
+zip -r /backup/xfusioncorp_ecommerce.zip /var/www/html/ecommerce
+scp /backup/xfusioncorp_ecommerce.zip clint@stbkp01:/backup/
+
+chmod 755 ecommerce_backup.sh
+ssh-keygen -t rsa
+
+ssh-copy-id clint@stbkp01
