@@ -4,6 +4,7 @@ Look into the issue and fix the same.
 
 Commnads:
 To check the status of MariaDB servive
+
 systemctl status mariadb
 
 Issue:
