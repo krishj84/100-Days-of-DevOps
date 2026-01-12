@@ -9,3 +9,22 @@ c. There is a ROOT.war file on Jump host at location /tmp.
 
 
 Deploy it on this tomcat server and make sure the webpage works directly on base URL i.e curl http://stapp02:5002
+
+
+Command:
+
+yum update -y && yum update tomcat
+
+Copy the war file from jumphost
+
+scp /tmp/ROOT.war steve@stapp02:/etc/shared/tomcat/webapps
+
+Change the port from 8080 to 5002 in server.xml
+
+Start the tomcat service
+
+systemctl start tomcat
+
+Test the application using curl from jumphost
+
+curl http://stapp02:5002
