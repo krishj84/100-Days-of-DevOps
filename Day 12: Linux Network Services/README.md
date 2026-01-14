@@ -22,6 +22,7 @@ ckets available, shutting down
 netstat -tulnp
 
 [root@stapp01 tony]# netstat -tulnp | grep -i 3002
+
 tcp        0      0 127.0.0.1:3002          0.0.0.0:*               LISTEN      500/sendmail: accep 
 
 
