@@ -8,3 +8,24 @@ We have one of our websites up and running on our Nautilus infrastructure in Str
 
 
 Solution:
+
+Install iptables and all its dependencies on each app host
+
+  yum update -y && yum install iptables-services -y
+  
+
+Block incoming port 8088 on all apps for everyone except for LBR host
+
+  iptables -A INPUT -p tcp -s stlb01 --dport 8088 -j ACCEPT
+
+  iptables -A INPUT -p tcp --dport 8088 -j DROP
+
+  service iptables save
+
+  systemctl restart iptables
+
+Make sure the rules remain, even after system reboot
+
+  systemctl enable iptables-service
+
+  systemctl start iptables-service
