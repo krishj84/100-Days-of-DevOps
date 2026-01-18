@@ -29,10 +29,18 @@ yum update -y && yum install nginx -y
    
     }
 
-3. Configure a Server Block to Proxy Requests
+2. Configure a Server Block to Proxy Requests
    
    location / {
    
             proxy_pass http://backend_servers; # Forward requests to the upstream group
    
    }
+
+Check the syntax
+
+nginx -t
+
+Restart the nginx
+
+systectl start nginx
