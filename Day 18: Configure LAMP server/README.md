@@ -26,7 +26,7 @@ On the DB server
 
 Install mariadb
 
-  yum update -y && yum install mariadb-server mariadb -y
+   yum update -y && yum install mariadb-server mariadb -y
 
 Start the mariadb service:
 
