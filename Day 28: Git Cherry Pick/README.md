@@ -4,6 +4,20 @@ There are two branches in this repository, master and feature. One of the develo
 
 Solution:
 
+The Git cherry-pick command is a powerful tool used to apply the changes from specific, individual commits on one branch to your currently active branch. This operation creates a new commit on the target branch with the same changes, rather than moving the original commit itself. 
+
+How to Use git cherry-pick
+
+The basic usage of the command line interface is straightforward. 
+
+ 1. Identify the commit hash: Use git log on the source branch to find the SHA-1 hash of the commit you want to apply. You can use git log  --oneline for a concise view.
+ 
+ 2. Switch to the target branch: Use git checkout <target-branch-name> to switch to the branch where you want the changes to be applied.
+ 
+ 3. Run the command: Execute git cherry-pick <commit-hash>. 
+ 
+The changes will be applied as a new commit on your current branch. If conflicts arise, you must resolve them manually, stage the changes with git add ., and then run git cherry-pick --continue. To stop the operation entirely, use git cherry-pick --abort. 
+
 [root@ststor01 natasha]# cd /usr/src/kodekloudrepos/news/
 
 [root@ststor01 news]# git status
