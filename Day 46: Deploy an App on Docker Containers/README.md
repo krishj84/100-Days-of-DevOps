@@ -28,6 +28,9 @@ e. Set MYSQL_DATABASE=database_blog and use any custom user ( except root ) with
 
 After running docker-compose up you can access the app with curl command curl <server-ip or hostname>:6200/
 
+Solution:
+
+<img width="731" height="490" alt="image" src="https://github.com/user-attachments/assets/9106abb7-44e5-4f20-b0f9-200f983a6fed" />
 
 
 
